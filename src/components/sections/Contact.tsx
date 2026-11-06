@@ -61,7 +61,7 @@ export default function Contact() {
     try {
       if (
         !WEB3FORMS_ACCESS_KEY ||
-        WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE"
+        WEB3FORMS_ACCESS_KEY === "3b7c5777-664f-480d-8f24-24437ccac712"
       ) {
         throw new Error(
           "Paste your Web3Forms key into WEB3FORMS_ACCESS_KEY at the top of Contact.tsx (or in .env.local)."
@@ -187,7 +187,7 @@ export default function Contact() {
                   className="w-full p-4 border border-[#262825] bg-[#121312] hover:border-[#ECDFCC]/60 transition-colors flex items-center justify-between group cursor-pointer"
                 >
                   <span className="font-mono text-sm sm:text-base text-[#ECDFCC] font-medium">
-                    hello@seglead.co.uk
+                    info@seglead.com
                   </span>
                   <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest px-2.5 py-1 bg-[#0D0E0D] border border-[#262825] text-[#ECDFCC]">
                     {copied ? (
