@@ -427,51 +427,6 @@ export default function Contact() {
             )}
           </div>
         </div>
-
-        {/* ===============================================================
-            MINIMAL ARCHITECTURAL FOOTER
-        =============================================================== */}
-        <footer className="mt-16 pt-8 border-t border-[#262825] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="text-xl font-bold tracking-tighter text-[#ECDFCC]"
-            >
-              SEGLEAD.
-            </a>
-            <span className="font-mono text-xs text-[#ECDFCC]/40">
-              // NEXT.JS WEB ENGINEERING &amp; AI SYSTEMS
-            </span>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-6 font-mono text-xs text-[#ECDFCC]/60">
-            <a
-              href="#friction"
-              className="hover:text-[#ECDFCC] transition-colors"
-            >
-              .01 Why Seglead
-            </a>
-            <a
-              href="#sandbox"
-              className="hover:text-[#ECDFCC] transition-colors"
-            >
-              .02 Systems
-            </a>
-            <a
-              href="#capabilities"
-              className="hover:text-[#ECDFCC] transition-colors"
-            >
-              .03 Capabilities
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center gap-1 text-[#ECDFCC] hover:opacity-75 transition-opacity"
-            >
-              <span>TOP</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-        </footer>
       </div>
     </section>
   );
