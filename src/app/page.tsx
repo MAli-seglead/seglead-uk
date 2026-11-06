@@ -19,7 +19,7 @@ export default function HomePage() {
       <Sandbox />
       <Capabilities />
       <Contact />
-      <Footrt />
+      <Footer />
     </main>
   );
 }
