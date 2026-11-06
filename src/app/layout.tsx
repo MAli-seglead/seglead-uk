@@ -17,39 +17,38 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.seglead.co.uk"),
+  metadataBase: new URL("https://www.seglead.com"),
   title: {
-    default: "SEGLEAD | Next.js Web Development & AI Automation Agency UK",
-    template: "%s | SEGLEAD UK",
+    default: "SEGLEAD | Web Architecture & AI Automation Studio (UK)",
+    template: "%s | SEGLEAD",
   },
   description:
-    "UK web engineering and practical AI workflow automation studio for startups and growing brands. High-converting Next.js 16 websites, Claude AI agents, and n8n/Zapier automation from £500 to £3,000.",
+    "Seglead engineers high-performance Next.js 16 web architectures and intelligent AI workflow automation systems for startups and scaling brands in the UK.",
   keywords: [
+    "Seglead",
     "Next.js agency UK",
     "AI workflow automation UK",
-    "startup web design London",
-    "n8n automation consultant UK",
+    "startup web engineering London",
+    "n8n automation studio",
     "Claude AI integration",
-    "high converting startup websites",
-    "Seglead",
   ],
   alternates: {
-    canonical: "/",
+    canonical: "https://www.seglead.com",
   },
   openGraph: {
-    title: "SEGLEAD | Websites & Intelligent AI Systems That Scale",
+    title: "SEGLEAD | Web Architecture & AI Automation Studio",
     description:
-      "High-converting Next.js websites and practical AI workflow automation for UK startups. Fixed sprints from £500 to £3,000.",
-    url: "https://www.seglead.co.uk",
+      "High-converting Next.js 16 websites and practical AI workflow automation engineered for scaling brands.",
+    url: "https://www.seglead.com",
     siteName: "SEGLEAD",
     locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEGLEAD | Web Engineering & AI Automation Studio (UK)",
+    title: "SEGLEAD | Web Engineering & AI Automation Studio",
     description:
-      "Next.js 16 web architecture and AI workflow automation for growing UK brands. Fixed pricing £500–£3,000.",
+      "Next.js 16 web architecture and intelligent AI systems built to scale.",
   },
   robots: {
     index: true,
@@ -57,25 +56,24 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data for Google Rich Results (UK Agency + Pricing Range)
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "SEGLEAD",
-  url: "https://www.seglead.co.uk",
+  url: "https://www.seglead.com",
+  email: "info@seglead.com",
   description:
-    "Next.js 16 web development and AI workflow automation studio serving UK startups and growing businesses.",
+    "Next.js 16 web development and AI workflow automation studio serving UK startups and scaling brands.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
   },
-  priceRange: "£500 - £3,000",
   knowsAbout: [
     "Next.js 16 Web Development",
     "AI Workflow Automation",
     "n8n & Zapier Integration",
     "Claude & OpenAI Custom Agents",
-    "Technical SEO & Conversion Rate Optimization",
+    "Technical SEO & Conversion Architecture",
   ],
 };
 
@@ -84,7 +82,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
- return (
+  return (
     <html
       lang="en-GB"
       className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
