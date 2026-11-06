@@ -12,10 +12,10 @@ const SCOPE_OPTIONS = [
   { id: "Web App / Portal", num: "04", label: "Web App / Portal" },
 ];
 
-// 👇 PASTE YOUR WEB3FORMS KEY HERE (from https://web3forms.com)
-// Or put NEXT_PUBLIC_WEB3FORMS_KEY=your_key in .env.local
+// Your active Web3Forms Access Key
 const WEB3FORMS_ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE";
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ||
+  "3b7c5777-664f-480d-8f24-24437ccac712";
 
 export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -46,7 +46,7 @@ export default function Contact() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("hello@seglead.co.uk");
+    navigator.clipboard.writeText("info@seglead.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -59,16 +59,6 @@ export default function Contact() {
     setErrorMsg(null);
 
     try {
-      if (
-        !WEB3FORMS_ACCESS_KEY ||
-        WEB3FORMS_ACCESS_KEY === "3b7c5777-664f-480d-8f24-24437ccac712"
-      ) {
-        throw new Error(
-          "Paste your Web3Forms key into WEB3FORMS_ACCESS_KEY at the top of Contact.tsx (or in .env.local)."
-        );
-      }
-
-      // Build FormData directly in the browser (Bypasses Cloudflare & JSON parse issues 100%)
       const formData = new FormData();
       formData.append("access_key", WEB3FORMS_ACCESS_KEY);
       formData.append(
@@ -78,23 +68,20 @@ export default function Contact() {
       formData.append("from_name", "Seglead Website");
       formData.append("name", name);
       formData.append("email", email);
+      formData.append("replyto", email);
       formData.append("company", company || "Not provided");
       formData.append("selected_modules", selectedScopes.join(", "));
       formData.append("message", brief);
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
         body: formData,
       });
 
-      const text = await response.text();
-      let data: { success?: boolean; message?: string } = {};
-
-      try {
-        data = JSON.parse(text);
-      } catch {
-        throw new Error("Network blocked the request. Please try again.");
-      }
+      const data = await response.json();
 
       if (!response.ok || !data.success) {
         throw new Error(data.message || "Could not send message.");
@@ -105,7 +92,7 @@ export default function Contact() {
       const msg =
         err instanceof Error
           ? err.message
-          : "Something went wrong. Please email hello@seglead.co.uk directly.";
+          : "Something went wrong. Please email info@seglead.com directly.";
       setErrorMsg(msg);
     } finally {
       setIsSubmitting(false);
@@ -141,7 +128,11 @@ export default function Contact() {
       className="relative w-full pt-24 md:pt-36 pb-12 px-6 md:px-12 bg-transparent text-[#ECDFCC] border-t border-[#262825]"
     >
       {/* Hidden anchor so existing #investment CTA buttons scroll smoothly here */}
-      <div id="investment" className="absolute -top-24 left-0" aria-hidden="true" />
+      <div
+        id="investment"
+        className="absolute -top-24 left-0"
+        aria-hidden="true"
+      />
 
       <div className="max-w-7xl mx-auto">
         {/* ===============================================================
@@ -454,13 +445,22 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6 font-mono text-xs text-[#ECDFCC]/60">
-            <a href="#friction" className="hover:text-[#ECDFCC] transition-colors">
+            <a
+              href="#friction"
+              className="hover:text-[#ECDFCC] transition-colors"
+            >
               .01 Why Seglead
             </a>
-            <a href="#sandbox" className="hover:text-[#ECDFCC] transition-colors">
+            <a
+              href="#sandbox"
+              className="hover:text-[#ECDFCC] transition-colors"
+            >
               .02 Systems
             </a>
-            <a href="#capabilities" className="hover:text-[#ECDFCC] transition-colors">
+            <a
+              href="#capabilities"
+              className="hover:text-[#ECDFCC] transition-colors"
+            >
               .03 Capabilities
             </a>
             <a
