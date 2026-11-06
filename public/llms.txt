@@ -1,0 +1,16 @@
+# SEGLEAD — Web Architecture & AI Automation Studio (UK)
+
+> Seglead is a United Kingdom-based digital engineering and AI workflow automation studio. We design and build sub-second Next.js 16 websites and integrate practical AI automation systems (Claude, OpenAI, n8n, Zapier) for startups and scaling businesses.
+
+## Core Services
+- **Next.js 16 Web Engineering**: Custom, high-converting web architecture with sub-second load speeds (0.3s LCP), semantic HTML5, and technical SEO[cite: 15].
+- **AI Workflow Automation**: End-to-end business process automation using n8n, Zapier, and custom Python pipelines to eliminate repetitive admin, route leads, and sync CRMs (HubSpot, Notion, Slack)[cite: 15].
+- **Custom AI Assistants**: 24/7 AI agents trained on company data to qualify inbound leads, answer customer inquiries, and book discovery calls automatically[cite: 15].
+- **Web Applications & Client Portals**: Bespoke full-stack digital platforms engineered for operational scale[cite: 15].
+
+## Key Facts & Contact
+- **Website**: https://www.seglead.com
+- **Location**: United Kingdom[cite: 15]
+- **Direct Contact**: info@seglead.com[cite: 16]
+- **Average Launch Timeline**: 7 to 10 days for core web & AI sprints[cite: 15]
+- **Response SLA**: Under 24 hours[cite: 15]
