@@ -13,7 +13,7 @@ const SCOPE_OPTIONS = [
 ];
 
 // Your active Web3Forms Access Key
-const WEB3FORMS_ACCESS_KEY =
+const WEB3FORMS_ACCESS_KEY ="3b7c5777-664f-480d-8f24-24437ccac712"
   process.env.NEXT_PUBLIC_WEB3FORMS_KEY ||
   "3b7c5777-664f-480d-8f24-24437ccac712";
 
