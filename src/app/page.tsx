@@ -5,6 +5,7 @@ import Friction from "@/components/sections/Friction";
 import Sandbox from "@/components/sections/Sandbox";
 import Capabilities from "@/components/sections/Capabilities";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Sandbox />
       <Capabilities />
       <Contact />
+      <Footrt />
     </main>
   );
 }
