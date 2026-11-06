@@ -254,7 +254,7 @@ export default function Navbar() {
                 className="w-full p-4 border border-[#262825] bg-[#121312] hover:border-[#ECDFCC]/60 transition-colors flex items-center justify-between cursor-pointer"
               >
                 <span className="font-mono text-sm text-[#ECDFCC]">
-                  hello@seglead.co.uk
+                  info@seglead.cm
                 </span>
                 <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest px-2.5 py-1 bg-[#0D0E0D] border border-[#262825] text-[#ECDFCC]">
                   {copied ? (
