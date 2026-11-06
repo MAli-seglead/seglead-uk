@@ -1,6 +1,4 @@
-// src/components/layout/Footer.tsx
-"use client";
-
+// src/components/sections/Footer.tsx
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -91,9 +89,7 @@ export default function Footer() {
 
         {/* Bottom Bar: Copyright & Legal */}
         <div className="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-[11px] text-[#ECDFCC]/45">
-          <span>
-            &copy; {new Date().getFullYear()} SEGLEAD. ALL RIGHTS RESERVED.
-          </span>
+          <span>&copy; 2026 SEGLEAD. ALL RIGHTS RESERVED.</span>
           <span>BUILT WITH NEXT.JS 16 &amp; GSAP // UK</span>
         </div>
       </div>
