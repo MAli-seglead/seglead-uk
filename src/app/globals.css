@@ -1,0 +1,24 @@
+/* src/app/globals.css */
+@import "tailwindcss";
+
+:root {
+  --bg-obsidian: #0D0E0D;
+  --surface-charcoal: #2A2B27;
+  --accent-sage: #697565;
+  --text-bone: #ECDFCC;
+}
+
+html,
+body {
+  background-color: #0D0E0D;
+  color: #ECDFCC;
+  overflow-x: hidden;
+}
+
+/* Crisp 1px Architectural Grid on the Global Canvas */
+.bg-architectural-grid {
+  background-size: 64px 64px;
+  background-image: 
+    linear-gradient(to right, rgba(236, 223, 204, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(236, 223, 204, 0.035) 1px, transparent 1px);
+}
